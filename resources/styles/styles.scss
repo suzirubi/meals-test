@@ -50,6 +50,12 @@ $color-wildSand     : #f6f6f6;
 $color-whiteSmoke   : #f4f4f4;
 $color-discoPurple  : #005689;
 
+body {
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-weight: 100;
+	color: $lightGrey;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -67,15 +73,54 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: 'Fira Sans Extra Condensed', sans-serif;
-  font-weight: 100;
-  color: $lightGrey;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-weight: 200;
 }
+
 h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
+	margin-bottom: 1em;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	font-size: 1.5em;
+	line-height: 2;
 }
 .time {
   color: darken($color-discoPurple, 10%);
   font-family: 'Handlee', cursive;
   font-size: .35em;
+}
+.container {
+	width:100vw;
+	height:100vh;
+	margin: 2vw 5vw;
+}
+.details {
+	button {
+		border: 0px;
+		background-color: white;
+  	font-family: 'Amatic SC';
+		color: $color-discoPurple;
+		font-size: .8em;
+		font-weight: 700;
+		margin-left: .5em;
+	}
+}
+.edit {
+	button {
+		border: .5px solid $color-discoPurple;
+		background: $color-discoPurple;
+  	font-family: 'Amatic SC';
+		color: $white;
+		font-size: .8em;
+		font-weight: 700;
+		height: 1.25em;
+		padding: 0 .15em;
+		margin:.5em;
+	}
 }
