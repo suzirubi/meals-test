@@ -1,0 +1,108 @@
+@import "bourbon/bourbon";
+@import "base/index";
+@import "components/index";
+@import "layout/index";
+
+@media only screen and (max-width: 620px) {
+
+}
+
+@media only screen and (min-width: 620px) {
+  header {
+    width: 100vw;
+    height: 8.5vh;
+  }
+  .navBar {
+    width: 100%;
+    height: 8.5vh;
+  }
+  .navBar .logo {
+    width: 60%;
+    height: 100%;
+    margin-top: 2em;
+    margin-left: .75em;
+  }
+  .navBar .dropdown {
+
+    width: 40%;
+    margin-top: .5em;
+    margin-right: 4%;
+
+    line-height: $base-line-height;
+
+    .dropdown-container {
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+    }
+    .dropdown-button {
+      background: $dropdown-background;
+      border-radius: $base-border-radius;
+      cursor: pointer;
+      float: right;
+      margin: 0;
+      padding: 0em 1em;
+      position: relative;
+    }
+
+    .dropdown-button:hover {
+      background-color: $dropdown-background-hover;
+    }
+
+    .dropdown-menu {
+      background: $dropdown-background;
+      border: $dropdown-border;
+      border-radius: $base-border-radius;
+      box-shadow: 0 2px 2px transparentize(black, 0.8);
+      color: $dropdown-color;
+      cursor: pointer;
+      display: none;
+      margin: 0;
+      overflow: show;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: $dropdown-distance-from-menu;
+      transition: all 0.2s ease-in-out;
+      width: 228px;
+      z-index: 99999;
+    }
+
+    .dropdown-menu li {
+      border-bottom: $dropdown-inner-border;
+      color: $dropdown-color;
+      list-style: none;
+      padding: $dropdown-padding / 2;
+    }
+
+    .dropdown-menu li:hover {
+      background: $dropdown-background-hover;
+    }
+
+    .dropdown-menu li:first-child {
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+    }
+
+    .dropdown-menu li:last-child {
+      border: 0;
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+
+    .show-menu {
+      display: block;
+    }
+  }
+  // dropdown code inspired by www.HUSAMUI.com
+
+  .navBar .menuIcon {
+    width: 0%;
+    display: none;
+    a svg {
+        width: 0%;
+        max-width: 0em;
+    }
+  }
+}
