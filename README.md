@@ -28,7 +28,7 @@ Calories: 365
 
 - [ x ] I want to log a food I have eaten by submitting a form with food name, calories and details.
 - [ x ] I want to view a list of foods I have logged.
-- [ ] I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
+- [ x ] I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
 - [ x ] I want to click a food to edit its name, details or calories (in case I decide to pretend my fries were 100 calories instead of 365).
 
 
@@ -46,14 +46,14 @@ Calories: 365
 - [ x ] Components are used to create display and behavior for your templates.
 - [ x ] TypeScript is used throughout application; including variable data types.
 - [ x ] Users can create and edit instances of a model.
-- [ ] Models can be filtered using a pipe.
+- [ x ] Models can be filtered using a pipe.
 - [ x ] Edit/update form supports two-way data binding
 - [ x ] Dependencies are managed with npm and Bower.
 - [ x ] Application includes a gulp-based asset pipeline with a development server, and all necessary build tasks.
 - [ x ] Application works as expected.
 - [ x ] Project is in a presentable, portfolio-quality state.
-- [ ] Required functionality is in place by Friday deadline.
-- [ ] Project demonstrates understanding of the week's concepts. If prompted, I should be able to discuss code with an instructor using the correct terminology.
+- [ x ] Required functionality is in place by Friday deadline.
+- [ x ] Project demonstrates understanding of the week's concepts. If prompted, I should be able to discuss code with an instructor using the correct terminology.
 
 ##SETUP INSTRUCTIONS
 

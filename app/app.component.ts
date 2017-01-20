@@ -5,8 +5,7 @@ import { Food } from './food.model';
   selector: 'app-root',
   template: `
     <div class="container">
-      <h1>MEALS I ATE <span class="time"> ( on {{month}}-{{day}}-{{year}} )</span></h1>
-      <h2>...or at least I wish I ate</h2>
+      <h1>MEALS YOU ATE TODAY <span class="details right"><button (click)="showNewForm()">Add Foods That You Ate Today!</button></span></h1>
 
 
 
@@ -14,15 +13,13 @@ import { Food } from './food.model';
       <food-list [childFoodList]="masterFoodList" (detailClickSender)="detailFood($event)" (clickSender)="editFood($event)"></food-list>
 
 
-       <span class="details"><button (click)="showNewForm()"><span class="large">Add New Food...</span></button></span>
+      <span class="time">( foods consumed today — {{month}}/{{day}}/{{year}} )</span>
 
       <food-detail [foodListDetail]="selectedDetailFood" (hideDetailButtonClickedSender)="hideDetail()"></food-detail>
 
       <edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()"></edit-food>
 
       <new-food [addNewFood]="newFood" (newFoodSender)="addFood($event)" (newButtonClickedSender)="finishedNew()"></new-food>
-
-
 
     </div>
   `

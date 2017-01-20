@@ -48,10 +48,21 @@ $color-wildSand     : #f6f6f6;
 $color-whiteSmoke   : #f4f4f4;
 $color-discoPurple  : #005689;
 
+
+
 body {
 	font-family: 'Fira Sans Extra Condensed', sans-serif;
 	font-weight: 100;
 	color: $lightGrey;
+}
+.container {
+	width:100vw;
+	height:100vh;
+	margin: 2vw 10vw 2vw 5vw;
+}
+p {
+	padding: 2em .5em;
+	line-height: 2;
 }
 
 a {
@@ -83,8 +94,20 @@ h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 1.5em;
-	margin-bottom: 1em;
 	font-style: italic;
+	margin-bottom: 2em;
+}
+h3 {
+	font-size: 2em;
+	font-weight: 600;
+	color: $color-heiroPink;
+	line-height: 2;
+}
+h6 {
+	font-size: 1em;
+	line-height: 2;
+	color: $lightGrey;
+	line-height: 2;
 }
 ul {
 	list-style: none;
@@ -102,7 +125,8 @@ img {
 .time {
   color: $color-discoPurple;
   font-family: 'Handlee', cursive;
-  font-size: .35em;
+  font-size: 1em;
+	padding-left: .5em;
 }
 .comment {
   color: darken($color-discoPurple, 10%);
@@ -111,11 +135,7 @@ img {
 	font-style: italic;
 	font-weight: 100;
 }
-.container {
-	width:100vw;
-	height:100vh;
-	margin: 2vw 5vw;
-}
+
 .details {
 	button {
 		border: 0px solid $color-wildSand;
@@ -203,4 +223,39 @@ img {
 .large {
 		font-size: 2em;
 		margin-bottom: 2em;
+}
+.small {
+	font-size: .75em;
+}
+.right {
+	float: right;
+	padding-right: 20vw;
+	margin-top: .3em;
+	font-size: .75em;
+	button {
+		color: $color-starPink;
+		&:hover {
+			color: $color-discoPurple;
+			text-decoration: underline;
+			margin:0;
+		}
+	}
+}
+
+.listDetail {
+	background: $color-wildSand;
+	width: 90%;
+	padding-left: 1em;
+	margin-top: 2em;
+	h6 {
+		font-size: 1.5em;
+		font-weight: 300;
+	}
+	button {
+		padding: 0 .5em;
+		margin:.5em 0 1em 0;
+	}
+}
+.mainList {
+	font-size: 1.25em;
 }
