@@ -6,30 +6,28 @@ import { Food } from './food.model';
   template: `
     <div class="newForm">
       <div *ngIf="addNewFood">
-        <h3>New Food</h3>
+        <h3>New Food <span class="comment">add each food item in your meal separately</span></h3>
         <div>
-          <label>New Food Image:</label>
-          <input #newUserImage>
+          <label>New Food Image:</label><br>
+          <input #newUserImage placeholder="add image url here">
         </div>
         <div>
-          <label>New Food Name:</label>
+          <label>New Food Name:</label><br>
           <input #newName>
         </div>
         <div>
-          <label>New Food Details:</label>
+          <label>New Food Details:</label><br>
           <input #newDetails>
         </div>
         <div>
-          <label>New Food Calories:</label>
-          <input #newCalories>
+          <label>New Food Calories — (for a handy calorie counter visit <a href="https://www.fitwatch.com/caloriecounter">fit watch</a>)</label><br>
+          <input #newCalories placeholder="enter calories in this food here">
         <div>
-          <label>New Food Time:</label>
+          <label>Time that I ate this Meal:</label><br>
           <input #newTime>
         </div>
         <div>
-          <button (click)="submitForm(newUserImage.value, newName.value, newDetails.value, newCalories.value, newTime.value); newUserImage.value=''; newName.value=''; newDetails.value=''; newCalories.value=''; newTime.value='';">Add</button>
-        </div>
-          <button (click)="newButtonClicked()">Done</button>
+          <span class="details"><button (click)="submitForm(newUserImage.value, newName.value, newDetails.value, newCalories.value, newTime.value); newUserImage.value=''; newName.value=''; newDetails.value=''; newCalories.value=''; newTime.value='';"><span class="large">Add New Food to My List!</span></button></span>          <span class="done"><button (click)="newButtonClicked()">Done</button></span>
         </div>
       </div>
     </div>

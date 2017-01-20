@@ -4,20 +4,32 @@ import { Food } from './food.model';
 @Component({
   selector: 'edit-food',
   template: `
-	<div>
+	<div class="newForm">
   	<div *ngIf="childSelectedFood">
   		<h3>Edit {{childSelectedFood.name}}</h3>
-  		<label>Edit Food Image:</label>
-  		<input [(ngModel)]="childSelectedFood.image">
-  		<label>Edit Food Name:</label>
-  		<input [(ngModel)]="childSelectedFood.name">
-  		<label>Edit Details about Food:</label>
-  		<input [(ngModel)]="childSelectedFood.details">
-  		<label>Edit Calories in Food:</label>
-  		<input [(ngModel)]="childSelectedFood.calories">
-      <label>Edit Time food consumed:</label>
-      <input [(ngModel)]="childSelectedFood.time">
-  		<button (click)="doneButtonClicked()">Done</button>
+      <div>
+        <label>Edit Food Image:</label><br>
+    		<input [(ngModel)]="childSelectedFood.image" placeholder="add new image url here if desired">
+      </div>
+      <div>
+        <label>Edit Food Name:</label><br>
+    		<input [(ngModel)]="childSelectedFood.name">
+      </div>
+      <div>
+        <label>Edit Details about Food:</label><br>
+    		<input [(ngModel)]="childSelectedFood.details">
+      </div>
+      <div>
+        <label>Edit Calories in Food:</label><br>
+    		<input [(ngModel)]="childSelectedFood.calories">
+      </div>
+      <div>
+        <label>Edit Time food consumed:</label><br>
+        <input [(ngModel)]="childSelectedFood.time">
+      </div>
+      <div>
+  		  <span class="done"><button (click)="doneButtonClicked()">Done</button></span>
+      </div>
   	</div>
   </div>
   `

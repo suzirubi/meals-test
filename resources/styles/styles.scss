@@ -10,9 +10,7 @@
 	margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
+
 
 // colors
 
@@ -56,6 +54,14 @@ body {
 	color: $lightGrey;
 }
 
+a {
+  text-decoration: none;
+	:hover {
+		color: $color-discoPurple;
+		font-weight: 700;
+	}
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -94,9 +100,16 @@ img {
 	margin-right: .35em;
 }
 .time {
-  color: darken($color-discoPurple, 10%);
+  color: $color-discoPurple;
   font-family: 'Handlee', cursive;
   font-size: .35em;
+}
+.comment {
+  color: darken($color-discoPurple, 10%);
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: .45em;
+	font-style: italic;
+	font-weight: 100;
 }
 .container {
 	width:100vw;
@@ -105,13 +118,15 @@ img {
 }
 .details {
 	button {
-		border: 0px;
-		background-color: white;
+		border: 0px solid $color-wildSand;
+		background-color: transparentize($white, 1);
   	font-family: 'Amatic SC';
 		color: $color-discoPurple;
 		font-size: .8em;
 		font-weight: 700;
-		margin-left: .5em;
+		&:hover {
+			color: $color-starPink;
+		}
 	}
 }
 .edit {
@@ -127,18 +142,65 @@ img {
 		margin:.5em;
 	}
 }
+.done {
+	button {
+		border: .5px solid $color-discoPurple;
+		background: $color-discoPurple;
+  	font-family: 'Amatic SC';
+		color: $white;
+		font-size: 1.5em;
+		font-weight: 700;
+		height: 1.5em;
+		padding: 0 .15em;
+		margin:.5em;
+	}
+}
 
 .newForm {
+	background: $color-wildSand;
+	width: 90%;
+	padding-left: 2em;
 	h3 {
 		font-family: 'Amatic SC';
-		font-size: 3em;
+		font-size: 2em;
 		font-weight: 700;
 		line-height: 1.5;
 		color: $color-discoPurple;
 		}
 	div {
-		margin-top: .5em;
+		margin-top: 1em;
 		width:100%;
 	}
-
+	input {
+		width: 90%;
+		height: 3em;
+		font-family: 'Amatic SC';
+		font-size: 1.5em;
+		color: $color-discoPurple;
+		padding: 0 1em;
+		font-weight: 700;
+		overflow-x: scroll;
+	}
+	label {
+		width: 90%;
+		height: 2em;
+		margin-bottom: .2em;
+		text-transform: uppercase;
+		font-weight: 300;
+		padding-right: 3em;
+	}
+	a {
+	  text-decoration: none;
+		font-weight: 500;
+		color: $color-discoPurple;
+		&:hover {
+			color: lighten($color-discoPurple, 50%);
+			font-weight: 700;
+			letter-spacing: .02em;
+		}
+	}
+}
+.large {
+		font-size: 2em;
+		margin-bottom: 2em;
 }

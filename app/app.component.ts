@@ -8,10 +8,13 @@ import { Food } from './food.model';
       <h1>MEALS I ATE <span class="time"> ( on {{month}}-{{day}}-{{year}} )</span></h1>
       <h2>...or at least I wish I ate</h2>
 
-      <button (click)="showNewForm()">Add New Food</button>
+
 
 
       <food-list [childFoodList]="masterFoodList" (detailClickSender)="detailFood($event)" (clickSender)="editFood($event)"></food-list>
+
+
+       <span class="details"><button (click)="showNewForm()"><span class="large">Add New Food...</span></button></span>
 
       <food-detail [foodListDetail]="selectedDetailFood" (hideDetailButtonClickedSender)="hideDetail()"></food-detail>
 
@@ -41,7 +44,7 @@ export class AppComponent {
 
 
   masterFoodList: Food[] = [
-  new Food('http://www.econation.co.nz/wp-content/uploads/2015/06/Hamburger.jpg', 'Hamburger', 'Lean Eastern Oregon Beef with Tomatoes, Lettuce and Mayonaise', 25, 6),
+  new Food('http://www.econation.co.nz/wp-content/uploads/2015/06/Hamburger.jpg', 'Hamburger', 'Lean Eastern Oregon Beef with Tomatoes, Lettuce and Mayonaise', 500, 6),
   new Food('https://4.imimg.com/data4/UR/QC/MY-26657356/french-fries-box-250x250.jpg','French Fries', 'Fried in white truffle oil and lightly salted', 100, 6),
   new Food('https://images.jmcatalog.com/prdimgs/ACO87yu8/FAB/FABKC24.JPG', 'Milkshake', 'Stumptown coffee, Hand-dipped Tillamook Chocolate, blended with cream', 15, 6)
 ];
