@@ -6,7 +6,7 @@ import { Food } from './food.model';
   selector: 'food-list',
   template: `
     <ul>
-      <li *ngFor="let currentFood of childFoodList"><img src={{currentFood.image}} alt={{currentFood.name}} width="50px">{{currentFood.name}}<span class="details"><button (click)="showDetailHasBeenClicked(currentFood)">more details...</button></span><span class="edit"><button (click)="editButtonHasBeenClicked(currentFood)">EDIT</button></span></li>
+      <li *ngFor="let currentFood of childFoodList"><img src={{currentFood.userImage}} alt={{currentFood.name}} width="50px">{{currentFood.name}}<span class="details"><button (click)="showDetailHasBeenClicked(currentFood)">more details...</button></span><span class="edit"><button (click)="editButtonHasBeenClicked(currentFood)">EDIT</button></span></li>
     </ul>
   `
 })

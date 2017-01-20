@@ -17,9 +17,12 @@ import { Food } from './food.model';
   `
 })
 
+
+
 export class FoodDetailComponent {
 
   @Input() foodListDetail: Food;
+
 
   @Output() hideDetailButtonClickedSender = new EventEmitter();
 

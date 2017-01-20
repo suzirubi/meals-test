@@ -63,8 +63,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin: 0;
-  padding: 0;
   font-family: 'Amatic SC';
   font-size: 4em;
   font-weight: 700;
@@ -128,4 +126,19 @@ img {
 		padding: 0 .15em;
 		margin:.5em;
 	}
+}
+
+.newForm {
+	h3 {
+		font-family: 'Amatic SC';
+		font-size: 3em;
+		font-weight: 700;
+		line-height: 1.5;
+		color: $color-discoPurple;
+		}
+	div {
+		margin-top: .5em;
+		width:100%;
+	}
+
 }

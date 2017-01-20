@@ -8,11 +8,18 @@ import { Food } from './food.model';
       <h1>MEALS I ATE <span class="time"> ( on {{month}}-{{day}}-{{year}} )</span></h1>
       <h2>...or at least I wish I ate</h2>
 
+      <button (click)="showNewForm()">Add New Food</button>
+
+
       <food-list [childFoodList]="masterFoodList" (detailClickSender)="detailFood($event)" (clickSender)="editFood($event)"></food-list>
 
       <food-detail [foodListDetail]="selectedDetailFood" (hideDetailButtonClickedSender)="hideDetail()"></food-detail>
 
       <edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()"></edit-food>
+
+      <new-food [addNewFood]="newFood" (newFoodSender)="addFood($event)" (newButtonClickedSender)="finishedNew()"></new-food>
+
+
 
     </div>
   `
@@ -29,6 +36,8 @@ export class AppComponent {
 
   selectedFood = null;
   selectedDetailFood = null;
+  newFood = null;
+
 
 
   masterFoodList: Food[] = [
@@ -46,14 +55,22 @@ detailFood(foodToShowDetail){
 
 }
 
-
-
 hideDetail() {
   this.selectedDetailFood = null;
 }
 
 finishedEditing() {
   this.selectedFood = null;
+}
+
+finishedNew() {
+  this.newFood = null;
+}
+addFood(newFoodFromChild: Food) {
+  this.masterFoodList.push(newFoodFromChild);
+}
+showNewForm(){
+  this.newFood = true;
 }
 
 }
