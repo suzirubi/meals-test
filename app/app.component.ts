@@ -19,9 +19,9 @@ export class AppComponent {
   year: number = this.currentTime.getFullYear();
 
   masterFoodList: Food[] = [
-  new Food('French Fries', 'Fried in white truffle oil and lightly salted', 100, 6),
-  new Food('Hamburger', 'Lean Eastern Oregon Beef with Tomatoes, Lettuce and Mayonaise', 25, 6),
-  new Food('Milkshake', 'Hand-dipped Tillamook Chocolate with cream', 15, 6)
+  new Food('http://www.econation.co.nz/wp-content/uploads/2015/06/Hamburger.jpg', 'Hamburger', 'Lean Eastern Oregon Beef with Tomatoes, Lettuce and Mayonaise', 25, 6),
+  new Food('https://4.imimg.com/data4/UR/QC/MY-26657356/french-fries-box-250x250.jpg','French Fries', 'Fried in white truffle oil and lightly salted', 100, 6),
+  new Food('https://images.jmcatalog.com/prdimgs/ACO87yu8/FAB/FABKC24.JPG', 'Milkshake', 'Stumptown coffee, Hand-dipped Tillamook Chocolate, blended with cream', 15, 6)
 ];
 
 }
