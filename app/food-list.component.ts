@@ -1,27 +1,35 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Food } from './food.model';
 
-// , Output, EventEmitter
 
 @Component({
   selector: 'food-list',
   template: `
     <ul>
-      <li *ngFor="let currentFood of childFoodList"><img src={{currentFood.image}} alt={{currentFood.name}} width="50px">{{currentFood.name}}<span class="details"><button>more details...</button></span><span class="edit"><button>EDIT</button></span></li>
+      <li *ngFor="let currentFood of childFoodList"><img src={{currentFood.image}} alt={{currentFood.name}} width="50px">{{currentFood.name}}<span class="details"><button (click)="showDetailHasBeenClicked(currentFood)">more details...</button></span><span class="edit"><button (click)="editButtonHasBeenClicked(currentFood)">EDIT</button></span></li>
     </ul>
   `
 })
 
 
-// (click)="editButtonHasBeenClicked(currentFood)"
+
 
 
 export class FoodListComponent {
   @Input() childFoodList: Food[];
-  //
-  // @Output() clickSender = new EventEmitter();
-  //
-  // editButtonHasBeenClicked(foodToEdit: Food) {
-  //   this.clickSender.emit(foodToEdit);
-  // }
+
+
+  @Output() clickSender = new EventEmitter();
+  @Output() detailClickSender = new EventEmitter();
+
+
+  editButtonHasBeenClicked(foodToEdit: Food) {
+    this.clickSender.emit(foodToEdit);
+  }
+
+
+  showDetailHasBeenClicked(foodToShowDetail: Food) {
+    this.detailClickSender.emit(foodToShowDetail);
+  }
+
 }
