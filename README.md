@@ -5,30 +5,51 @@ _*Project Name: Angular2 JS Independent Project *_
 
 _*Project Author: Suzi Rubino*_
 
-##Question and Answer Message Board REQUIREMENTS:
-Create a question and answer message board where a user submits a question and other users can respond with answers.
+##Meal Tracker (calorie-counter) Project Description:
+Create a meal tracking application. Users should be able to log foods they've eaten each day, including details about the meal and its number of calories. Assignment assumes foods being logged are for a single day.
 
-- [ ] Questions should have the content of the question itself, an author and additional notes.
-- [ ] Answers should have the content of the answer and the author.
-- [ ] Include a header and/or navbar that appears on all pages containing the name of your site and a link to the home page.
-- [ ] List all questions on the homepage, with only the question and the name of the author showing.
-- [ ] Users should be able to click on a question, and be routed to another page containing additional information.
-- [ ] Allow users to add and edit questions.
-- [ ] Allow users to add answers to a question.
-- [ ] Answers should be added and viewed on the same page as the question they respond to.
+For example:
+
+```
+---------
+Name: "Hamburger"
+Details: "Didn't get a soda or cheese on my burger!"
+Calories: 354
+---------
+
+---------
+Name: "Fries"
+Details: "I only ate half of them."
+Calories: 365
+---------
+```
+
+###As a user...
+
+- [ ] I want to log a food I have eaten by submitting a form with food name, calories and details.
+- [ ] I want to view a list of foods I have logged.
+- [ ] I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
+- [ ] I want to click a food to edit its name, details or calories (in case I decide to pretend my fries were 100 calories instead of 365).
+
 
 ###Further Exploration
 
-- [ ] Add custom styling.
-- [ ] Implement upvote/downvote functionality so that users may vote on answers.
-- [ ] Add tags to questions.
+- [ ] Custom SASS styling with corresponding Gulp tasks to compile.
+- [ ] Display of the total number of calories consumed in a day, and/or the average number of calories consumed in a day.
+- [ ] Add a property that records when each food was eaten. The user could enter a date and time, or the app can generate a timestamp.
+- [ ] Expand the application to display multiple days of food logs. Group the food entries by day. Then include a component to display the total calories for whichever day the user selects.
+- [ ] Add a new master component to average the total calories consumed per day so that the user can figure out how much exercise they should be getting on a regular basis.
 
 ###Objectives
 
-- [ ] Application template contains header with link(s).
-- [ ] Data is stored and retrieved from Ember Data models and Firebase.
-- [ ] Components are used to create display and behavior for this template.
-- [ ] One-to-many relationship exists between Questions and Answers.
+- [ ] Application uses a model to organize data.
+- [ ] Components are used to create display and behavior for your templates.
+- [ ] TypeScript is used throughout application; including variable data types.
+- [ ] Users can create and edit instances of a model.
+- [ ] Models can be filtered using a pipe.
+- [ ] Edit/update form supports two-way data binding
+- [ ] Dependencies are managed with npm and Bower.
+- [ ] Application includes a gulp-based asset pipeline with a development server, and all necessary build tasks.
 - [ ] Application works as expected.
 - [ ] Project is in a presentable, portfolio-quality state.
 - [ ] Required functionality is in place by Friday deadline.
@@ -36,54 +57,37 @@ Create a question and answer message board where a user submits a question and o
 
 ##SETUP INSTRUCTIONS
 
-This following portion of this README outlines the details of reviewing this Ember application. Ember is a Model View Controller (MVC) framework built entirely on the client side the data used in the app binds to the model for the data on the client side). Ember implements convention over configuration, by relying on consistent naming conventions web developers can focus on building the app itself rather than creating the support structure that makes the app run.
+This following portion of this README outlines the details of reviewing this Angular2 application. Angular2 is a Model View Controller (MVC) framework built entirely on the client side. Angular2 uses components to control the data display and functionality, so it is also known as a Model View Component framework.
+
 
 ### Prerequisites
 
 You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
+* [Gulp](http://gulpjs.com/)
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Bower](https://bower.io/)
-* [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+* [Typescript](https://www.typescriptlang.org/) (with NPM)
+* [Atom and Atom Typescript Package](https://atom.io/packages/atom-typescript/)
+
+Clone the repository (address below) and follow the steps below to view and edit the application:
 
 ### Installation
 
-* `git clone <repository-url>` this repository
-* `cd answer-board`
-* `npm install`
-* `bower install`
-
-### Running / Development
-
-* `ember serve`
-* Visit the answer-board app at [http://localhost:4200](http://localhost:4200).
-
-#### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-#### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-#### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-#### Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+1. `git clone <repository-url>` this repository (address below)
+2. `cd meals-test`
+3. `npm install typescript -g`
+4. `apm install atom-typescript` (restart atom after this step)
+5. `npm install`
+6. `bower install`
+7. `gulp build`
+8. `gulp serve`
 
 
 #####This and previous project links
+* [Repository for Javascript Week Three Independent Project - Angular2](https://github.com/suzirubi/meals-test.git)
+* [Repository for Javascript Week Two Independent Project - Ember](https://github.com/suzirubi/questions.git)
 * [Repository for Javascript Week One Independent Project - Modern APIs](https://github.com/suzirubi/doctors.git)
 * [Visit my gh-page for CSS Independent Project #4](https://rawgit.com/suzirubi/kerrWebCalendar/master/index.html)
 * [Visit my gh-page for CSS Independent Project #3](https://rawgit.com/suzirubi/tarot/master/index.html)
