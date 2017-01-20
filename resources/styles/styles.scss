@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Handlee|Fira+Sans+Extra+Condensed:200,200i,300,300i,400,400i,500,500i,600,600i,700i,900");
+
+
+
+//Resets
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+// colors
+
+$white              : #fff;
+$black              : #000;
+$grey               : #333;
+$lightGrey          : #525252;
+
+$red                : #ED1C24;
+$orange             : #F39200;
+$blue               : #113245;
+$cream              : #CEBAA7;
+$gold               : #DD9630;
+$yellow             : #FAD75A;
+
+$color-lightYellow  : #F2DD98;
+$color-lightBlue    : #19D8F2;
+
+$color-judgeRed     : #B5066E;
+$color-empressRed   : #D4145A;
+$color-empressOrange: #D79139;
+$color-chariotOrange: #F7931E;
+$color-strongOrange : #FBB03B;
+$color-hermitGreen  : #3AAA61;
+$color-magicPurple  : #8A44C0;
+$color-sunPurple    : #B5066E;
+$color-heiroPink    : #E516C1;
+$color-loversPink   : #C0639B;
+$color-starPink     : #DB289E;
+$color-magicGreen   : #7CC444;
+$color-hermitGreen  : #3AAA61;
+$color-priestessBlue: #80B1A1;
+$color-chariotBlue  : #A8E2C0;
+$color-wildSand     : #f6f6f6;
+$color-whiteSmoke   : #f4f4f4;
+$color-discoPurple  : #005689;
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Amatic SC';
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $color-discoPurple;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-weight: 100;
+  color: $lightGrey;
+}
+h2 {
+  font-size: 1.25em;
+}
