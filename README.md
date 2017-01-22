@@ -42,18 +42,18 @@ Calories: 365
 
 ###Objectives
 
-- [ x ] Application uses a model to organize data.
-- [ x ] Components are used to create display and behavior for your templates.
-- [ x ] TypeScript is used throughout application; including variable data types.
-- [ x ] Users can create and edit instances of a model.
-- [ x ] Models can be filtered using a pipe.
-- [ x ] Edit/update form supports two-way data binding
-- [ x ] Dependencies are managed with npm and Bower.
-- [ x ] Application includes a gulp-based asset pipeline with a development server, and all necessary build tasks.
-- [ x ] Application works as expected.
-- [ x ] Project is in a presentable, portfolio-quality state.
-- [ x ] Required functionality is in place by Friday deadline.
-- [ x ] Project demonstrates understanding of the week's concepts. If prompted, I should be able to discuss code with an instructor using the correct terminology.
+- [x] Application uses a model to organize data.
+- [x] Components are used to create display and behavior for your templates.
+- [x] TypeScript is used throughout application; including variable data types.
+- [x] Users can create and edit instances of a model.
+- [x] Models can be filtered using a pipe.
+- [x] Edit/update form supports two-way data binding
+- [x] Dependencies are managed with npm and Bower.
+- [x] Application includes a gulp-based asset pipeline with a development server, and all necessary build tasks.
+- [x] Application works as expected.
+- [x] Project is in a presentable, portfolio-quality state.
+- [x] Required functionality is in place by Friday deadline.
+- [x] Project demonstrates understanding of the week's concepts. If prompted, I should be able to discuss code with an instructor using the correct terminology.
 
 ##SETUP INSTRUCTIONS
 
