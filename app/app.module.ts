@@ -13,6 +13,7 @@ import { CounterPipe } from './counter.pipe';
 
 
 
+
 @NgModule({
   imports: [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, FoodListComponent, FoodDetailComponent, EditFoodComponent, NewFoodComponent, CounterPipe ],

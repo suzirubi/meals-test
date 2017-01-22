@@ -45,7 +45,7 @@ export class NewFoodComponent {
   @Output() newButtonClickedSender = new EventEmitter();
 
 
-  submitForm(userImage: string, name: string, details: string, calories: number, time: number) {
+  submitForm(userImage: string, name: string, details: string, calories: number, time: number, noImage) {
     var newFoodToAdd: Food = new Food(userImage, name, details, calories, time);
     this.newFoodSender.emit(newFoodToAdd);
   }
