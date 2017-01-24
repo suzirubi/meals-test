@@ -6,14 +6,19 @@ import { Food } from './food.model';
   template: `
 	<div class="listDetail">
   	<div *ngIf="foodListDetail">
-  		<h3>{{foodListDetail.name}}</h3>
-      <h6>{{foodListDetail.details}}</h6>
-      <h6>{{foodListDetail.name}} has a total of {{foodListDetail.calories}} calories</h6>
-      <h6>{{foodListDetail.time}} was when I ate this food</h6>
+  		<h3>{{currentFood.name}}</h3>
+      <h6>{{currentFood.details}}</h6>
+      <h6>{{currentFood.name}} has a total of {{currentFood.calories}} calories</h6>
+      <h6>{{currentFood.time}} was when I ate this food</h6>
 
       <span class="done"><button (click)="hideDetailButtonClicked()"><span class="small">Hide Details</span></button></span>
   	</div>
+
+    <span class="details"><button *ngIf="!listDetail" (click)="detailButtonClicked()"> - more details...</button></span>
+
+    <span class="edit"><button (click)="editFood()">EDIT</button></span>
   </div>
+  <edit-food *ngIf="!selectedFood" [selectedFood]="currentFood" (doneButtonClickedSender)="doneButtonClicked()"></edit-food>
   `
 })
 
@@ -21,13 +26,30 @@ import { Food } from './food.model';
 
 export class FoodDetailComponent {
 
-  @Input() foodListDetail: Food;
+  @Input() currentFood: Food;
+  foodListDetail: boolean = false;
+  selectedFood: boolean = true;
+
+  @Output() doneButtonClickedSender = new EventEmitter();
+
+  @Output() detailClickSender = new EventEmitter();
+
+  doneButtonClicked(foodToEdit: Food) {
+    this.doneButtonClickedSender.emit(foodToEdit);
+  }
 
 
-  @Output() hideDetailButtonClickedSender = new EventEmitter();
+  editFood() {
+    this.selectedFood = false;
+  }
 
-  hideDetailButtonClicked() {
-  	this.hideDetailButtonClickedSender.emit();
+
+  detailButtonClicked() {
+    this.foodListDetail = true;
+  }
+
+  hideDetailButtonClicked(){
+    this.foodListDetail = false;
   }
 
 }

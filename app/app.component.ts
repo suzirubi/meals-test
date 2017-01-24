@@ -7,17 +7,9 @@ import { Food } from './food.model';
     <div class="container">
       <h1>MEALS YOU ATE TODAY <span class="details right"><button (click)="showNewForm()">Add Foods That You Ate Today!</button></span></h1>
 
-
-
-
-      <food-list [childFoodList]="masterFoodList" (detailClickSender)="detailFood($event)" (clickSender)="editFood($event)"></food-list>
-
+      <food-list [childFoodList]="masterFoodList" (doneButtonClickedSender)="finishedEditing($event)" (detailClickSender)="detailFood($event)"></food-list>
 
       <span class="time">( foods consumed today — {{month}}/{{day}}/{{year}} )</span>
-
-      <food-detail [foodListDetail]="selectedDetailFood" (hideDetailButtonClickedSender)="hideDetail()"></food-detail>
-
-      <edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()"></edit-food>
 
       <new-food [addNewFood]="newFood" (newFoodSender)="addFood($event)" (newButtonClickedSender)="finishedNew()"></new-food>
 
@@ -33,7 +25,6 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() +1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
-
   selectedFood = null;
   selectedDetailFood = null;
   newFood = null;
@@ -46,21 +37,12 @@ export class AppComponent {
   new Food('https://images.jmcatalog.com/prdimgs/ACO87yu8/FAB/FABKC24.JPG', 'Milkshake', 'Stumptown coffee, Hand-dipped Tillamook Chocolate, blended with cream', 15, 6)
 ];
 
-editFood(clickedFood) {
-  this.selectedFood = clickedFood;
+finishedEditing(foodToEdit){
+  this.selectedFood = foodToEdit;
 }
 
 detailFood(foodToShowDetail){
   this.selectedDetailFood = foodToShowDetail;
-
-}
-
-hideDetail() {
-  this.selectedDetailFood = null;
-}
-
-finishedEditing() {
-  this.selectedFood = null;
 }
 
 finishedNew() {
