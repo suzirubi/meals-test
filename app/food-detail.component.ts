@@ -4,6 +4,9 @@ import { Food } from './food.model';
 @Component({
   selector: 'food-detail',
   template: `
+
+  <span class="details"><button *ngIf="!listDetail" (click)="detailButtonClicked()"> - more details...</button></span>
+
 	<div class="listDetail">
   	<div *ngIf="foodListDetail">
   		<h3>{{currentFood.name}}</h3>
@@ -11,13 +14,14 @@ import { Food } from './food.model';
       <h6>{{currentFood.name}} has a total of {{currentFood.calories}} calories</h6>
       <h6>{{currentFood.time}} was when I ate this food</h6>
 
-      <span class="done"><button (click)="hideDetailButtonClicked()"><span class="small">Hide Details</span></button></span>
+      <span class="edit"><button (click)="hideDetailButtonClicked()"><span >HIDE</span></button></span>
+      <span class="edit pink"><button (click)="editFood()">EDIT</button></span>
   	</div>
-
-    <span class="details"><button *ngIf="!listDetail" (click)="detailButtonClicked()"> - more details...</button></span>
-
-    <span class="edit"><button (click)="editFood()">EDIT</button></span>
   </div>
+
+
+
+
   <edit-food *ngIf="!selectedFood" [selectedFood]="currentFood" (doneButtonClickedSender)="doneButtonClicked()"></edit-food>
   `
 })

@@ -248,8 +248,11 @@ img {
 	width: 90%;
 	padding-left: 1em;
 	margin-top: 2em;
+	h3 {
+		font-size: 1.25em;
+	}
 	h6 {
-		font-size: 1.5em;
+		font-size: .9em;
 		font-weight: 300;
 	}
 	button {
@@ -259,4 +262,10 @@ img {
 }
 .mainList {
 	font-size: 1.25em;
+}
+.pink {
+	button {
+		background: $color-starPink;
+		border: .5px solid $color-starPink;
+	}
 }

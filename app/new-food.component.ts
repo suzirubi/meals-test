@@ -45,7 +45,7 @@ export class NewFoodComponent {
   @Output() newButtonClickedSender = new EventEmitter();
 
 
-  submitForm(userImage: string, name: string, details: string, calories: number, time: number, noImage) {
+  submitForm(userImage: string, name: string, details: string, calories: number, time: number) {
     if (userImage === ''){
       userImage = "./resources/images/catWithFood.png";
     }
